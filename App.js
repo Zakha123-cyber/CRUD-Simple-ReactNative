@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 
-//importando los componentes
+import Login from "./screens/Login";
 import CreateProduct from "./screens/CreateProduct";
 import ListProduct from "./screens/ListProduct";
 import ShowProduct from "./screens/ShowProduct";
@@ -15,6 +15,7 @@ export default function App() {
   function MyStack() {
     return (
       <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="List" component={ListProduct} />
         <Stack.Screen name="Create" component={CreateProduct} />
         <Stack.Screen name="Show" component={ShowProduct} />
